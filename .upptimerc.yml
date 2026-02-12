@@ -1,0 +1,58 @@
+# Upptime configuration
+# https://upptime.js.org/docs/configuration
+
+owner: sphinxcode
+repo: thd-status
+
+sites:
+  - name: Total Human Design
+    url: https://totalhumandesign.com
+    icon: https://totalhumandesign.com/favicon.ico
+
+  - name: Chart API
+    url: https://api.totalhumandesign.com/health
+
+  - name: n8n Automation
+    url: https://auto.totalhumandesign.com/healthz
+
+  - name: Payload CMS
+    url: https://cms.totalhumandesign.com
+
+  - name: Analytics (Umami)
+    url: https://analytics.totalhumandesign.com
+
+  - name: Social (Postiz)
+    url: https://post.totalhumandesign.com
+
+  - name: Dev Portal
+    url: https://dev.totalhumandesign.com
+
+status-website:
+  cname: status.totalhumandesign.com
+  name: THD Status
+  theme: dark
+  introTitle: "**Total Human Design** is an AI-powered Human Design platform"
+  introMessage: This page shows real-time status and uptime history for all THD services.
+  navbar:
+    - title: Homepage
+      href: https://totalhumandesign.com
+
+notifications:
+  - type: telegram
+    botToken: $TELEGRAM_BOT_TOKEN
+    chatId: $TELEGRAM_CHAT_ID
+
+workflowSchedule:
+  uptime: "*/5 * * * *"
+  responseTime: "*/5 * * * *"
+  updates: "0 0 * * *"
+  graphs: "0 0 * * *"
+
+i18n:
+  activeIncidents: Active incidents
+  pastIncidents: Past incidents
+  pastIncidentsResolved: Resolved
+  allSystemsOperational: All systems operational
+  incidentReport: Incident report
+
+user-agent: "THD-Upptime/1.0"

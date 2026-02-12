@@ -1,0 +1,22 @@
+# Upptime generated files
+history/
+api/
+graphs/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# AI files
+CLAUDE.md
+CODEBASE_MAP.md
+docs/CODEBASE_MAP.md
+
+# Env
+.env
+.env.*
+!.env.example
