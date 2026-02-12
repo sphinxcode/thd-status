@@ -4,12 +4,18 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 jobs:
-  update:
+  release:
+    name: Check for updates
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: upptime/uptime-monitor@v1.41.0
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
+          token: ${{ secrets.GH_PAT || github.token }}
+      - name: Update
+        uses: upptime/uptime-monitor@v1.41.0
         with:
           command: "update"
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_PAT: ${{ secrets.GH_PAT || github.token }}
